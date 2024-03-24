@@ -3,7 +3,7 @@ import { Project } from "models/project";
 import ReactMarkdown from "react-markdown";
 import { fetchReadMe } from "services/githubServices";
 import { getProjectById } from "services/projectServices";
-import { demoUrl, sourceCodeUrl } from "../components";
+import { demoUrl, sourceCodeUrl } from "../components/ProjectCard";
 
 const Page = async ({ params }: { params: { id: string } }) => {
   const projectResponse = await getProjectById(params.id);

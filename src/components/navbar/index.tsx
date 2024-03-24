@@ -12,7 +12,7 @@ export default function NavBar() {
         <div className='flex lg:flex-1'>
           <Link href='/about' className='-m-1.5 p-1.5'>
             <span className='sr-only'>Welcome to Zhengliang Wang Blog</span>
-            Puck's Blog
+            Blog | Zhengliang Wang
           </Link>
         </div>
         <Popover.Group className='hidden lg:flex lg:gap-x-12'>

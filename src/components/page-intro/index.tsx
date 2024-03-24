@@ -9,7 +9,6 @@ export default function PageIntro({ name, description = '' }: { name: string, de
                     {description}
                 </p>
             </div>
-            <hr />
         </>
     )
 }

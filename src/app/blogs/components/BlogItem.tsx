@@ -1,6 +1,7 @@
 import TagChipList from 'components/chip/TagChipList';
 import SolidSparkIcon from 'icons/SolidSparkIcon';
 import { Post } from 'models/post';
+import Link from 'next/link';
 import { estimateReadingDuration } from 'utils/mdConfig';
 import { formatDate } from 'utils/misc-utils';
 
@@ -24,9 +25,9 @@ export default function BlogItem({ blog }: { blog: Post }) {
               <a href={`/blogs/${blog.id}`}>{blog.title} </a>
             </p>
 
-            <a className='text-sm font-semibold leading-6  text-gray-500' href={`/blogs/${blog.id}`}>
+            <Link className='text-sm font-semibold leading-6  text-gray-500' href={`/blogs/${blog.id}`}>
               Learn More
-            </a>
+            </Link>
           </div>
           <span className=' text-xs leading-5 text-gray-500'>
             last updated at: {formatDate(blog?.updatedAt as string)}

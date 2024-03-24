@@ -1,5 +1,6 @@
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 import { Fragment, useCallback } from 'react';
 
 interface SubMenuItemProp {
@@ -17,9 +18,9 @@ interface NavBarItemProps {
 export default function NavBarItem({ name, href, subMenuItems = [] }: NavBarItemProps) {
   const renderNavItem = useCallback(() => {
     return (
-      <a href={href} className='text-sm font-semibold leading-6 text-gray-900'>
+      <Link href={href as string} className='text-sm font-semibold leading-6 text-gray-900'>
         {name}
-      </a>
+      </Link>
     );
   }, [href, name]);
 
@@ -48,10 +49,10 @@ export default function NavBarItem({ name, href, subMenuItems = [] }: NavBarItem
                   className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50'
                 >
                   <div className='flex-auto'>
-                    <a href={item.href} className='block font-semibold text-gray-900'>
+                    <Link href={item.href as string} className='block font-semibold text-gray-900'>
                       {item.name}
                       <span className='absolute inset-0' />
-                    </a>
+                    </Link>
                     <p className='mt-1 text-gray-600'>{item?.description}</p>
                   </div>
                 </div>

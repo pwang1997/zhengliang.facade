@@ -28,21 +28,23 @@ export const sourceCodeUrl = (url: string) => {
 
 export const projectCard = (project: Project) => {
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{project.title}</div>
-        <p className="text-gray-700 text-base">{project.summary}</p>
+    <div className="max-w-xs rounded flex flex-col gap-3 px-4 overflow-hidden shadow-lg bg-white">
+      <div>
+        <div className="font-bold text-xl mb-2 line-clamp-1">{project.title}</div>
+        <p className="text-gray-700 text-base line-clamp-3">{project.summary}</p>
       </div>
-      <div className="container flex flex-col gap-2 px-6 py-4 link-set">
+      <div className="container flex flex-col gap-2  link-set">
         {!!project.sourceCodeUrl && sourceCodeUrl(`github.com/${project.sourceCodeUrl}`)}
 
         {!!project.demoUrl && demoUrl(project.demoUrl)}
       </div>
 
-      <TagChipList tags={project.tags ?? []} />
-      <div className="px-6 py-4 float-right">
+      <div>
+        <TagChipList tags={project.tags ?? []} />
+      </div>
+      <div className="flex justify-end float-right">
         <Link
-          className="bg-blue-500  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-grey-500   text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           href={`/projects/${project.id}`}
         >
           Learn More

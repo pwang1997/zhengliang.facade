@@ -30,10 +30,10 @@ export const config = [
 ];
 
 export const aboutConfig = [
-  { name: 'About me', description: 'Get a better understanding of your traffic', href: '/about', icon: ChartPieIcon },
+  { name: 'About me', description: 'Get to know me better', href: '/about', icon: ChartPieIcon },
   {
     name: 'Site notes',
-    description: 'Speak directly to your customers',
+    description: 'My Development Diary',
     href: '/site-notes',
     icon: CursorArrowRaysIcon,
   },

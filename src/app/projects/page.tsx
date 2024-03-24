@@ -1,7 +1,7 @@
 import PageIntro from "components/page-intro";
 import { Project } from "models/project";
 import { listProjects } from "services/projectServices";
-import { projectCard } from "./components";
+import { projectCard } from "./components/ProjectCard";
 
 const Page = async () => {
   const projectsResponse = await listProjects();
@@ -10,7 +10,7 @@ const Page = async () => {
   return (
     <div>
       <PageIntro name="Projects"/>
-      <div className="project-cards-container container flex flex-col gap-2 p-4 m-4">
+      <div className="project-cards-container container flex gap-4 m-4">
         {projects?.map((project: Project) => {
           return (
             <div className="project-card-container" key={project.id}>
