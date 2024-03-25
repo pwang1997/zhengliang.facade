@@ -28,10 +28,10 @@ export const sourceCodeUrl = (url: string) => {
 
 export const projectCard = (project: Project) => {
   return (
-    <div className="max-w-xs rounded flex flex-col gap-3 px-4 overflow-hidden shadow-lg bg-white">
+    <div className="max-w-xs rounded flex flex-col gap-3 px-4 overflow-hidden shadow-lg bg-white dark:bg-medium dark:text-white">
       <div>
-        <div className="font-bold text-xl mb-2 line-clamp-1">{project.title}</div>
-        <p className="text-gray-700 text-base line-clamp-3">{project.summary}</p>
+        <div className="font-bold text-xl mb-2 line-clamp-1 dark:bg-medium dark:text-white">{project.title}</div>
+        <p className="text-gray-900 text-base line-clamp-3 dark:bg-medium dark:text-white">{project.summary}</p>
       </div>
       <div className="container flex flex-col gap-2  link-set">
         {!!project.sourceCodeUrl && sourceCodeUrl(`github.com/${project.sourceCodeUrl}`)}
@@ -44,7 +44,7 @@ export const projectCard = (project: Project) => {
       </div>
       <div className="flex justify-end float-right">
         <Link
-          className="bg-grey-500   text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="bg-grey-900  text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:bg-medium dark:text-white"
           href={`/projects/${project.id}`}
         >
           Learn More

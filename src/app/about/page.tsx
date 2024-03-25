@@ -15,11 +15,11 @@ export default function AboutPage() {
       <div className='mt-6 border-t border-gray-100'>
         <dl className='divide-y divide-gray-100'>
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
-            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900'>
+            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <UserIcon />
               About Myself
             </dt>
-            <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>
+            <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:bg-medium dark:text-white'>
               I am a software engineer who loves to build and experience novel technologies. My tech stack mainly falls
               under the Java & Spring domain. My work and projects primarily involve Spring Boot, Docker, Redis, MySQL,
               and Message Queues (Kafka / RabbitMQ). Instead of being a pure backend engineer, I find being a full-stack
@@ -36,7 +36,7 @@ export default function AboutPage() {
             </dd>
           </div>
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
-            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900'>
+            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <GraduationIcon /> Education & Career Path
             </dt>
             <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>
@@ -44,13 +44,13 @@ export default function AboutPage() {
             </dd>
           </div>
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
-            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900'>
+            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <MapPinIcon />
               Find Me
             </dt>
             <dd className='mt-1 flex flex-col gap-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>
               <div>
-                <a className='flex gap-1' href='https://github.com/pwang1997'>
+                <a className='flex gap-1 dark:bg-medium dark:text-white' href='https://github.com/pwang1997'>
                   <div>
                     <GitHubIcon />
                   </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <a className='flex gap-1' href='mailto:wzlpuck+blog@gmail.com'>
+                <a className='flex gap-1 dark:bg-medium dark:text-white' href='mailto:wzlpuck+blog@gmail.com'>
                   <div>
                     <InboxIcon />
                   </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
           </div>
 
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
-            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900'>
+            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <CloudArrowIcon /> Attachments
             </dt>
             <dd className='mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0'>

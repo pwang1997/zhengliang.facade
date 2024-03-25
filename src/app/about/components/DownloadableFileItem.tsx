@@ -11,12 +11,12 @@ export default function DownloadableFileItem({ name, size, href }: DownloadableF
       <div className='flex w-0 flex-1 items-center'>
         <PaperClipIcon className='h-5 w-5 flex-shrink-0 text-gray-400' aria-hidden='true' />
         <div className='ml-4 flex min-w-0 flex-1 gap-2'>
-          <span className='truncate font-medium'>{name}</span>
+          <span className='truncate font-medium dark:bg-medium dark:text-white'>{name}</span>
           <span className='flex-shrink-0 text-gray-400'>{size}</span>
         </div>
       </div>
       <div className='ml-4 flex-shrink-0'>
-        <a href={href} className='font-medium text-indigo-600 hover:text-indigo-500'>
+        <a href={href} className='font-medium text-indigo-600 hover:text-indigo-500 dark:bg-medium dark:text-white'>
           Download
         </a>
       </div>
