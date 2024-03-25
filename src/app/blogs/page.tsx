@@ -1,4 +1,5 @@
 import PageIntro from "components/page-intro";
+import SystemMetricsPanel from "components/side-panel/SystemMetricsPanel";
 import { Post } from "models/post";
 import { listBlogs } from "services/blogServices";
 import BlogItem from "./components/BlogItem";
@@ -27,6 +28,10 @@ export default async function Page() {
                             </li>
                         ))}
                     </ul>
+                </div>
+
+                <div>
+                    <SystemMetricsPanel />
                 </div>
             </div>
         </div>

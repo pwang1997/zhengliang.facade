@@ -2,6 +2,7 @@
 
 import { Popover } from '@headlessui/react';
 import DarkModeSwitcher from 'components/button/DarkModeSwitcher';
+import GitHubIcon from 'icons/GitHubIcon';
 import Link from 'next/link';
 import { aboutConfig } from './config';
 import NavBarItem from './NavBarItem';
@@ -20,8 +21,15 @@ export default function NavBar() {
           <NavBarItem name='Projects' href='/projects' />
           <NavBarItem name='Blogs' href='/blogs' />
           <NavBarItem name='About' subMenuItems={aboutConfig} />
+          <NavBarItem href='https://github.com/pwang1997'>
+            <div className='flex  justify-center items-center text-sm font-semibold leading-6 text-gray-900  dark:text-white'>
+              <GitHubIcon /> GitHub
+            </div>
+          </NavBarItem>
         </Popover.Group>
-        <DarkModeSwitcher />
+        <div className='pl-10'>
+          <DarkModeSwitcher />
+        </div>
       </nav>
     </header>
   );

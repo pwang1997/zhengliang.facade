@@ -10,19 +10,20 @@ interface SubMenuItemProp {
 }
 
 interface NavBarItemProps {
-  name: string;
+  name?: string;
+  children ?: React.ReactNode;
   href?: string;
   subMenuItems?: SubMenuItemProp[];
 }
 
-export default function NavBarItem({ name, href, subMenuItems = [] }: NavBarItemProps) {
+export default function NavBarItem({ name, children, href, subMenuItems = [] }: NavBarItemProps) {
   const renderNavItem = useCallback(() => {
     return (
       <Link href={href as string} className='text-sm font-semibold leading-6 text-gray-900  dark:text-white'>
-        {name}
+        {children ?? name}
       </Link>
     );
-  }, [href, name]);
+  }, [children, href, name]);
 
   const renderPopoverNavItem = useCallback(() => {
     return (
