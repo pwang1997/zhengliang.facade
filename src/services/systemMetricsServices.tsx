@@ -6,7 +6,7 @@ export async function fetchSystemMetrics(relatedToFetch : string[]) {
 
     const joinedRelatedToFetch = parseFetchToRelated({related : relatedToFetch});
 
-    const response = await fetch(`${BASE_URL}?relatedToFetch=${joinedRelatedToFetch}`);
+    const response = await fetch(`${BASE_URL}?relatedToFetch=${joinedRelatedToFetch}`, { next: { revalidate: 3660 } });
     const data = await response.json();
     return data;
   }

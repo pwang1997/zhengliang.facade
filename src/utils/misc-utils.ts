@@ -53,3 +53,5 @@ export function mergeLists(list1: any[], list2: any[]): any[] {
 
   return merged;
 }
+
+export const isSubset = (arr1: any[], arr2: any[]) => arr1.some((item: any) => arr2.includes(item));

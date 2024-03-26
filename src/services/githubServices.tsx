@@ -7,7 +7,8 @@ export const fetchReadMe = async (repo: string) => {
         headers: {
           "Content-Type": "text/plain",
         },
-      }
+        next: { revalidate: 3660 }
+      },
     );
     const data = await response.text();
 

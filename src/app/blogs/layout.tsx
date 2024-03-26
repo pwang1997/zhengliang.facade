@@ -1,6 +1,4 @@
 import NavBar from "components/navbar";
-import PageIntro from "components/page-intro";
-import BundledMetricsPanel from "components/side-panel/BundledMetricsPanel";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -20,11 +18,7 @@ export default function RootLayout({
       <body className={`${inter.className} dark:bg-medium dark:text-white`}>
         <NavBar />
         <div className='content container min-h-screen max-w-7xl flex-grow pt-4 lg:mx-auto'>
-          <PageIntro name="Blogs" />
-          <div className='container flex justify-between gap-x-16'>
-            {children}
-            <BundledMetricsPanel />
-          </div>
+          {children}
         </div>
       </body>
     </html>
