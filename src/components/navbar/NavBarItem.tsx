@@ -47,7 +47,7 @@ export default function NavBarItem({ name, children, href, subMenuItems = [] }: 
               {subMenuItems?.map((item: SubMenuItemProp) => (
                 <div
                   key={item.name}
-                  className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 dark:bg-dark dark:text-white dark:hover:bg-slate-900'
+                  className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 dark:bg-dark dark:text-white dark:hover:bg-slate-500'
                 >
                   <div className='flex-auto'>
                     <Link href={item.href as string} className='block font-semibold text-gray-900  dark:text-white'>

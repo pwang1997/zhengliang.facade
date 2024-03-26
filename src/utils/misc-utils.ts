@@ -28,3 +28,28 @@ export function dynamicSort(property: string) {
     return result * sortOrder;
   };
 }
+
+
+export function mergeLists(list1: any[], list2: any[]): any[] {
+  const merged: any[] = [];
+
+  // Create a map to store counts by name
+  const countMap: Map<string, number> = new Map();
+
+  // Update counts from list1
+  for (const item of list1) {
+      countMap.set(item.name, (countMap.get(item.name) || 0) + item.count);
+  }
+
+  // Update counts from list2
+  for (const item of list2) {
+      countMap.set(item.name, (countMap.get(item.name) || 0) + item.count);
+  }
+
+  // Convert countMap back to Data objects
+  for (const [name, count] of countMap) {
+      merged.push({ name, count });
+  }
+
+  return merged;
+}

@@ -21,7 +21,7 @@ export default function RootLayout({
         <NavBar />
         <div className='content container min-h-screen max-w-7xl flex-grow pt-4 lg:mx-auto'>
           <PageIntro name="Blogs" />
-          <div className='container flex justify-between gap-x-24'>
+          <div className='container flex justify-between gap-x-16'>
             {children}
             <BundledMetricsPanel />
           </div>

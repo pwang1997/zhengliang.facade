@@ -12,8 +12,8 @@ interface MetaData {
 
 interface SystemMetrics {
   [key: string]: {
-      name: string;
-      size: number;
+      name?: string;
+      count?: number;
       items ?: string[]
   }
 }

@@ -1,9 +1,16 @@
 import { SystemMetrics } from "models/base";
+import Link from "next/link";
 import { fetchSystemMetrics } from "services/systemMetricsServices";
 
 
 export default async function SystemMetricsPanel() {
-    const systemMetrics = (await fetchSystemMetrics(["blogs", "projects", "tags", "views"])).data as SystemMetrics;
+
+    const systemMetrics = (await fetchSystemMetrics(["posts:COUNT_UNIQUE", "projects:COUNT_UNIQUE", "tags:COUNT_UNIQUE", "views:COUNT_UNIQUE"])).data as SystemMetrics;
+
+    const postCount = systemMetrics['posts:COUNT_UNIQUE'];
+    const projectCount = systemMetrics["projects:COUNT_UNIQUE"];
+    const tagCount = systemMetrics["tags:COUNT_UNIQUE"];
+    const viewsCount = systemMetrics["views:COUNT_UNIQUE"];
 
     return (
         <>
@@ -13,22 +20,26 @@ export default async function SystemMetricsPanel() {
 
             <div className="flex  justify-between  gap-4">
                 <div className="flex flex-col">
-                    <span className=" flex justify-center">{systemMetrics?.blogs?.size ?? 0}</span>
+                    <Link href="/blogs" className="underline">
+                        <span className=" flex justify-center">{postCount?.count ?? 0}</span>
+                    </Link>
                     <span>blogs</span>
                 </div>
 
                 <div className="flex flex-col">
-                    <span className=" flex justify-center">{systemMetrics?.projects?.size ?? 0}</span>
+                    <Link href="/projects" className=" underline">
+                        <span className=" flex justify-center">{projectCount?.count ?? 0}</span>
+                    </Link>
                     <span>projects</span>
                 </div>
 
                 <div className="flex flex-col">
-                    <span className=" flex justify-center">{systemMetrics?.tags?.size ?? 0}</span>
+                    <span className=" flex justify-center">{tagCount?.count ?? 0}</span>
                     <span>tags</span>
                 </div>
 
                 <div className="flex flex-col">
-                    <span className=" flex justify-center">{systemMetrics?.views?.size ?? 0}</span>
+                    <span className=" flex justify-center">{viewsCount?.count ?? 0}</span>
                     <span>views</span>
                 </div>
             </div>

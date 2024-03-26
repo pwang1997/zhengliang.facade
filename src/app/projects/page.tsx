@@ -1,4 +1,3 @@
-import PageIntro from "components/page-intro";
 import { Project } from "models/project";
 import { listProjects } from "services/projectServices";
 import { projectCard } from "./components/ProjectCard";
@@ -8,9 +7,7 @@ const Page = async () => {
   const projects = projectsResponse.data as Project[];
 
   return (
-    <div>
-      <PageIntro name="Projects"/>
-      <div className="project-cards-container container flex gap-4 m-4">
+      <div className=" container flex gap-2 m-2 grow flex-wrap gap-x-6 gap-y-2">
         {projects?.map((project: Project) => {
           return (
             <div className="project-card-container" key={project.id}>
@@ -19,7 +16,6 @@ const Page = async () => {
           );
         })}
       </div>
-    </div>
   );
 };
 
