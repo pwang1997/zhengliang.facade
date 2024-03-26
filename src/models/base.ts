@@ -10,4 +10,13 @@ interface MetaData {
   views?: string | number;
 }
 
-export type { Base, MetaData };
+interface SystemMetrics {
+  [key: string]: {
+      name: string;
+      size: number;
+      items ?: string[]
+  }
+}
+
+export type { Base, MetaData, SystemMetrics };
+
