@@ -5,7 +5,10 @@ import SunIcon from "icons/SunIcon";
 import { useEffect, useState } from "react";
 
 export default function DarkModeSwitcher() {
-    const [darkMode, setDarkMode] = useState(true);
+    const [darkMode, setDarkMode] = useState<boolean>(
+        typeof window !== 'undefined' ?
+            localStorage?.getItem("theme") === "dark" : true
+    );
 
     useEffect(() => {
         const theme = localStorage.getItem("theme");

@@ -17,7 +17,9 @@ export default function AboutPage() {
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
             <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <UserIcon />
-              About Myself
+              <div id="myself">
+                <a href="#myself">About Myself</a>
+              </div>
             </dt>
             <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:bg-medium dark:text-white'>
               I am a software engineer who loves to build and experience novel technologies. My tech stack mainly falls
@@ -37,7 +39,10 @@ export default function AboutPage() {
           </div>
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
             <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
-              <GraduationIcon /> Education & Career Path
+              <GraduationIcon />
+              <div id="experience">
+                <a href="#experience">Education & Career Path</a>
+              </div>
             </dt>
             <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>
               <Timeline />
@@ -46,7 +51,9 @@ export default function AboutPage() {
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
             <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <MapPinIcon />
-              Find Me
+              <div id="contact">
+                <a href="#contact">Find Me</a>
+              </div>
             </dt>
             <dd className='mt-1 flex flex-col gap-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>
               <div>
@@ -71,7 +78,10 @@ export default function AboutPage() {
 
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
             <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
-              <CloudArrowIcon /> Attachments
+              <CloudArrowIcon />
+              <div id="resume">
+                <a href="#resume">Attachments</a>
+              </div>
             </dt>
             <dd className='mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0'>
               <ul className='divide-y divide-gray-100 rounded-md border border-gray-200'>
