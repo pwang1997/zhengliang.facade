@@ -1,3 +1,4 @@
+import Footer from "components/footer";
 import NavBar from "components/navbar";
 import { Inter } from "next/font/google";
 import { Metadata } from "next/types";
@@ -20,6 +21,7 @@ export default function RootLayout({
       <div className='content container min-h-screen max-w-7xl flex-grow pt-4 lg:mx-auto'>
         {children}
       </div>
+      <Footer />
     </>
 
   )

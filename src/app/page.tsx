@@ -1,3 +1,4 @@
+import Footer from "components/footer";
 import NavBar from "components/navbar";
 
 export default function Page() {
@@ -6,13 +7,6 @@ export default function Page() {
       <NavBar />
       <div className='content container min-h-screen max-w-4xl flex-grow pt-4 lg:mx-auto'>
         <div className=" flex justify-center">
-
-          {/* <h1 className="relative w-[max-content] text-lg
-        before:absolute before:inset-0 before:animate-typewriter before:bg-white 
-        after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-black">
-            
-          </h1> */}
-
           <div className="typewriter">
 
             <p className=" text-lg">Welcome to <b>FACADE</b>.</p>
@@ -31,9 +25,8 @@ export default function Page() {
         <div className="flex justify-center">
           Powered by Next.js, Spring Boot, Docker
         </div>
-
-
       </div>
+      <Footer />
     </>
 
   )

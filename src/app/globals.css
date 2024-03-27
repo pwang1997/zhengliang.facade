@@ -1,16 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.typing-effect {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid black; /* Cursor effect */
-    animation: typing-animation 2s steps(14) infinite;
-  }
-  
-  @keyframes typing-animation {
-    from { width: 0; }
-    to { width: 100%; }
-  }
