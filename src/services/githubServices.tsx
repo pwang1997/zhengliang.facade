@@ -5,7 +5,7 @@ export const fetchReadMe = async (repo: string) => {
       {
         method: "GET",
         headers: {
-          "Content-Type": "text/plain",
+          'accept':'application/vnd.github.v3.raw'
         },
         next: { revalidate: 3660 }
       },
