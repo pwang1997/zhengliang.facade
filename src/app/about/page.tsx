@@ -28,7 +28,7 @@ export default function AboutPage() {
               engineer brings me more excitement and vitality. <br />I am currently based in Ottawa, Canada. Before
               moving to Ottawa, I acquired an Honours Bachelor of Computer Science at the University of British
               Columbia, Kelowna Campus. My thesis focused on engineering an audience response system for student labs
-              and class activities."
+              and class activities.
               <a href='https://github.com/pwang1997'>
                 <img
                   alt='github-activities'
