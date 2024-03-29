@@ -1,12 +1,10 @@
 import { parseFetchToRelated } from "utils/misc-utils";
-
-const BASE_URL = "http://localhost:8080/api/v1/metrics";
+import { METRICS_ENDPOINT } from "utils/restUtils";
 
 export async function fetchSystemMetrics(relatedToFetch : string[]) {
-
     const joinedRelatedToFetch = parseFetchToRelated({related : relatedToFetch});
 
-    const response = await fetch(`${BASE_URL}?relatedToFetch=${joinedRelatedToFetch}`, { next: { revalidate: 3660 } });
+    const response = await fetch(`${METRICS_ENDPOINT}?relatedToFetch=${joinedRelatedToFetch}`, { next: { revalidate: 3600 } });
     const data = await response.json();
     return data;
   }

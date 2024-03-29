@@ -1,7 +1,7 @@
-const BASE_URL = "http://localhost:8080/api/v1/tags";
+import { TAG_ENDPOINT } from "utils/restUtils";
 
 async function listTags() {
-  const response = await fetch(`${BASE_URL}/list`,  { next: { revalidate: 3660 } });
+  const response = await fetch(`${TAG_ENDPOINT}/list`,  { next: { revalidate: 3600 } });
   const data = await response.json();
   return data;
 }

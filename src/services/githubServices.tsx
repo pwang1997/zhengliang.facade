@@ -7,7 +7,7 @@ export const fetchReadMe = async (repo: string) => {
         headers: {
           'accept':'application/vnd.github.v3.raw'
         },
-        next: { revalidate: 3660 }
+        next: { revalidate: 3600 }
       },
     );
     const data = await response.text();
