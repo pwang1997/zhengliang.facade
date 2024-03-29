@@ -87,7 +87,7 @@ export default function AboutPage() {
               <ul className='divide-y divide-gray-100 rounded-md border border-gray-200'>
                 <DownloadableFileItem
                   name='ZhengliangWang-SDE-Resume.pdf'
-                  href='/public/ZhengliangWang-SDE-Resume.pdf'
+                  href='/resume/ZhengliangWang-SDE-Resume.pdf'
                   size='174KB'
                 />
               </ul>
