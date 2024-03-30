@@ -5,7 +5,7 @@ import { mergeLists } from "utils/misc-utils";
 
 export default async function CategoryMetricsPanel() {
     const categoryMetrics = (await fetchSystemMetrics(["tags:COUNT_USAGE"])).data as SystemMetrics;
-    const countUsage = categoryMetrics[`tags:COUNT_USAGE`] as SystemMetrics;
+    const countUsage = categoryMetrics?.[`tags:COUNT_USAGE`] as SystemMetrics;
     const { projects, posts } = countUsage;
     const merged = mergeLists(projects as SystemMetrics[], posts as SystemMetrics[])
 

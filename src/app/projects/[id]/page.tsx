@@ -6,10 +6,9 @@ import { getProjectById } from "services/projectServices";
 import { demoUrl, sourceCodeUrl } from "../components/ProjectCard";
 
 const Page = async ({ params }: { params: { id: string } }) => {
-  const projectResponse = await getProjectById(params.id);
-  const project: Project = projectResponse.data;
+  const project = (await getProjectById(params?.id))?.data as Project ?? [];
 
-  const readMe = await fetchReadMe(project.sourceCodeUrl);
+  const readMe = await fetchReadMe(project?.sourceCodeUrl) ?? '';
 
   return (
     <>
@@ -19,21 +18,21 @@ const Page = async ({ params }: { params: { id: string } }) => {
         </span>
       </div>
       <div className="flex gap-2 m-2">
-        <TagChipList tags={project.tags ?? []} />
+        <TagChipList tags={project?.tags ?? []} />
       </div>
       <div className="md:container md:mx-auto px-4 py-8">
-        <span>{project.summary}</span>
+        <span>{project?.summary}</span>
       </div>
 
       <div className="container mx-auto py-8">
         <MDRender content={readMe as string} />
       </div >
       < div className="container flex flex-col gap-2 px-6 py-4 link-set" >
-        {!!project.sourceCodeUrl &&
-          sourceCodeUrl(`github.com/${project.sourceCodeUrl}`)
+        {!!project?.sourceCodeUrl &&
+          sourceCodeUrl(`github.com/${project?.sourceCodeUrl}`)
         }
 
-        {!!project.demoUrl && demoUrl(project.demoUrl)}
+        {!!project?.demoUrl && demoUrl(project?.demoUrl)}
       </div >
     </>
   );

@@ -8,12 +8,10 @@ import { fetchSystemMetrics } from "services/systemMetricsServices";
 import ProjectsContent from "./components/ProjectsContent";
 
 const Page = async () => {
-  const projectsResponse = await listProjects();
-  const projects = projectsResponse.data as Project[];
+  const projects = (await listProjects())?.data as Project[] ?? [];
 
-
-  const categoryMetrics = (await fetchSystemMetrics(["tags:COUNT_USAGE"])).data as SystemMetrics;
-  const countUsage = categoryMetrics[`tags:COUNT_USAGE`] as SystemMetrics;
+  const categoryMetrics = (await fetchSystemMetrics(["tags:COUNT_USAGE"]))?.data as SystemMetrics;
+  const countUsage = categoryMetrics?.[`tags:COUNT_USAGE`] as SystemMetrics;
   const projectTagUsage = countUsage?.projects as CategoryPanelDataProp[];
 
   return (

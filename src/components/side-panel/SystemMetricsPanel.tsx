@@ -7,10 +7,10 @@ export default async function SystemMetricsPanel() {
 
     const systemMetrics = (await fetchSystemMetrics(["posts:COUNT_UNIQUE", "projects:COUNT_UNIQUE", "tags:COUNT_UNIQUE", "views:COUNT_UNIQUE"])).data as SystemMetrics;
 
-    const postCount = systemMetrics['posts:COUNT_UNIQUE'];
-    const projectCount = systemMetrics["projects:COUNT_UNIQUE"];
-    const tagCount = systemMetrics["tags:COUNT_UNIQUE"];
-    const viewsCount = systemMetrics["views:COUNT_UNIQUE"];
+    const postCount = systemMetrics?.['posts:COUNT_UNIQUE'];
+    const projectCount = systemMetrics?.["projects:COUNT_UNIQUE"];
+    const tagCount = systemMetrics?.["tags:COUNT_UNIQUE"];
+    const viewsCount = systemMetrics?.["views:COUNT_UNIQUE"];
 
     return (
         <>

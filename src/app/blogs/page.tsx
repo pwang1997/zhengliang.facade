@@ -9,11 +9,10 @@ import BlogsContent from "./components/BlogsContent";
 
 export default async function Page() {
 
-    const blogsResponse = await listBlogs();
-    const blogs = blogsResponse?.data as Post[]
+    const blogs = (await listBlogs())?.data as Post[]
 
-    const categoryMetrics = (await fetchSystemMetrics(["tags:COUNT_USAGE"])).data as SystemMetrics;
-    const countUsage = categoryMetrics[`tags:COUNT_USAGE`] as SystemMetrics;
+    const categoryMetrics = (await fetchSystemMetrics(["tags:COUNT_USAGE"]))?.data as SystemMetrics;
+    const countUsage = categoryMetrics?.[`tags:COUNT_USAGE`] as SystemMetrics;
     const postTagUsage = countUsage?.posts as CategoryPanelDataProp[];
 
     return (

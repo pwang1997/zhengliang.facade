@@ -9,11 +9,11 @@ import { formatDate } from "utils/misc-utils";
 export default async function Page({ params }: { params: { id: string } }) {
     const id = params.id;
 
-    const blog = (await getBlogById(id)).data as Post;
+    const blog = (await getBlogById(id))?.data as Post ?? null;
 
-    const { content } = matter(blog.content);
+    const { content } = matter(blog?.content);
 
-    const readingDuration = estimateReadingDuration(blog.content);
+    const readingDuration = estimateReadingDuration(blog?.content);
 
     return (
         <>
