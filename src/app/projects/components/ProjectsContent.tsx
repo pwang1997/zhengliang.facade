@@ -6,8 +6,6 @@ import { Project } from "models/project";
 import { useCallback, useMemo, useState } from "react";
 import { projectCard } from "./ProjectCard";
 
-
-
 export default function ProjectsContent({ projects, projectTagUsage }: { projects: Project[], projectTagUsage: CategoryPanelDataProp[] }) {
 
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -44,16 +42,14 @@ export default function ProjectsContent({ projects, projectTagUsage }: { project
     }, [projects, selectedTag, simpleProjects])
 
     return (
-        <>
-            <div className="main-container w-full">
-                <div className="min-w-full">
-                    <CategoryPanel data={projectTagUsage} handleOnClick={handleOnClick} />
-                </div>
-
-                <div className="card-container container flex gap-2 m-2 grow flex-wrap gap-x-6 gap-y-2">
-                    {renderProjectCards()}
-                </div>
+        <div className="main-container w-full">
+            <div className="min-w-full">
+                <CategoryPanel data={projectTagUsage} handleOnClick={handleOnClick} />
             </div>
-        </>
+
+            <div className="card-container container flex gap-2 m-2 grow flex-wrap gap-x-6 gap-y-2">
+                {renderProjectCards()}
+            </div>
+        </div>
     )
 }

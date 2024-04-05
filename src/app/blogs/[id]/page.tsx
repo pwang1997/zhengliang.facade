@@ -1,3 +1,4 @@
+import Breadcrumb from "components/breadcrumb";
 import TagChipList from "components/chip/TagChipList";
 import MDRender from "components/MDRender";
 import matter from "gray-matter";
@@ -17,6 +18,13 @@ export default async function Page({ params }: { params: { id: string } }) {
 
     return (
         <>
+            <Breadcrumb
+                breadcrumbs={[
+                    { href: '/blogs', name: 'Blogs' },
+                    { href: `/blogs/${id}`, name: blog?.title as string },
+                ]}
+            />
+
             <p className='flex justify-center text-3xl'>{blog?.title}</p>
             <p className='flex items-center justify-center gap-2 text-xs leading-5 text-gray-500'>
                 <span>last updated at: {formatDate(blog?.updatedAt ?? '0')}</span>

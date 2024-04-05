@@ -1,9 +1,15 @@
+import Breadcrumb from "components/breadcrumb";
 import notes from "./site-notes";
 
 export default function Page() {
   return (
     <div className="dark:bg-medium dark:text-white">
-      <p className='flex text-3xl font-semibold leading-7 text-gray-900 dark:bg-medium dark:text-white'>Site Notes | Developer Notes</p>
+      <Breadcrumb
+        breadcrumbs={[
+          { href: '/site-notes', name: 'Site Notes | Developer Notes' }
+        ]}
+      />
+
       <div className='max-w-md divide-y divide-gray-200 text-gray-900 dark:divide-gray-700 dark:text-white  min-w-full'>
         {
           notes.map((item: { date: string, text: string }) => {

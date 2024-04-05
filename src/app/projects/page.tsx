@@ -1,5 +1,5 @@
+import Breadcrumb from "components/breadcrumb";
 import { CategoryPanelDataProp } from "components/category-panel";
-import PageIntro from "components/page-intro";
 import BundledMetricsPanel from "components/side-panel/BundledMetricsPanel";
 import { SystemMetrics } from "models/base";
 import { Project } from "models/project";
@@ -17,7 +17,7 @@ const Page = async () => {
   return (
     <div className="container flex flex-col gap-4">
       <div>
-        <PageIntro name="Projects" />
+        <Breadcrumb breadcrumbs={[{ href: '/projects', name: 'Projects' }]} />
       </div>
       <div className="flex min-w-full gap-4">
         <ProjectsContent projects={projects} projectTagUsage={projectTagUsage} />

@@ -1,5 +1,5 @@
+import Breadcrumb from "components/breadcrumb";
 import { CategoryPanelDataProp } from "components/category-panel";
-import PageIntro from "components/page-intro";
 import BundledMetricsPanel from "components/side-panel/BundledMetricsPanel";
 import { SystemMetrics } from "models/base";
 import { Post } from "models/post";
@@ -18,7 +18,7 @@ export default async function Page() {
     return (
         <div className="container flex flex-col gap-4">
             <div>
-                <PageIntro name="Blogs" />
+                <Breadcrumb breadcrumbs={[{ href: '/blogs', name: 'Blogs' }]} />
             </div>
             <div className="flex min-w-full gap-4">
                 <BlogsContent blogs={blogs} postTagUsage={postTagUsage} />

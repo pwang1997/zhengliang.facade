@@ -51,7 +51,7 @@ export default function BlogsContent({ blogs, postTagUsage }: { blogs: Post[], p
                 </div>
 
                 <div className='list-container'>
-                    <ul className='divide-y divide-gray-100'>
+                    <ul className='divide-gray-100'>
                         {renderBlogItems(true)}
                         {renderBlogItems(false)}
                     </ul>

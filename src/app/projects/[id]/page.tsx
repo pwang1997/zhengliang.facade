@@ -1,3 +1,4 @@
+import Breadcrumb from "components/breadcrumb";
 import TagChipList from "components/chip/TagChipList";
 import MDRender from "components/MDRender";
 import { Project } from "models/project";
@@ -12,6 +13,12 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
   return (
     <>
+      <Breadcrumb
+        breadcrumbs={[
+          { href: '/projects', name: 'Projects' },
+          { href: `/projects/${params.id}`, name: project?.title as string },
+        ]}
+      />
       <div className="flex justify-center content-center ">
         <span className="text-5xl font-extrabold dark:text-white">
           {project?.title}

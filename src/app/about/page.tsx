@@ -1,4 +1,4 @@
-import PageIntro from 'components/page-intro';
+import Breadcrumb from 'components/breadcrumb';
 import CloudArrowIcon from 'icons/CloudArrowIcon';
 import GitHubIcon from 'icons/GitHubIcon';
 import GraduationIcon from 'icons/GraduationIcon';
@@ -11,7 +11,11 @@ import Timeline from './components/Timeline';
 export default function AboutPage() {
   return (
     <div>
-      <PageIntro name='About' description='Interesting and boring things about Zhengliang Wang' />
+      <Breadcrumb
+        breadcrumbs={[
+          { href: '/about', name: 'About' }
+        ]}
+      />
       <div className='mt-6 border-t border-gray-100'>
         <dl className='divide-y divide-gray-100'>
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
@@ -87,7 +91,7 @@ export default function AboutPage() {
               <ul className='divide-y divide-gray-100 rounded-md border border-gray-200'>
                 <DownloadableFileItem
                   name='ZhengliangWang-SDE-Resume.pdf'
-                  href='/resume/ZhengliangWang-SDE-Resume.pdf'
+                  href='/ZhengliangWang-SDE-Resume.pdf'
                   size='174KB'
                 />
               </ul>

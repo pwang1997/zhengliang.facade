@@ -18,10 +18,10 @@ export default async function CategoryMetricsPanel() {
             {merged.map((item: { name: string; count: number }) => {
                 return (
                     <div key={item.name} className="flex justify-between">
-                        <a className={"flex justify-between hover:bg-gray-300 dark:hover:bg-slate-500  rounded py-1 px-1.5 transition-all w-full uppercase"} href={`/categories/${item.name}`}>
-                            <dd>{item.name}</dd>
-                            <dd>{item.count}</dd>
-                        </a>
+                        <p className={"flex justify-between hover:bg-gray-300 dark:hover:bg-slate-500  rounded py-1 px-1.5 transition-all w-full uppercase"}>
+                            <span>{item.name}</span>
+                            <span>{item.count}</span>
+                        </p>
                     </div>
                 )
             })}

@@ -1,7 +1,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
-import { Fragment, useCallback } from 'react';
+import { Fragment } from 'react';
 
 interface SubMenuItemProp {
   href: string;
@@ -11,21 +11,21 @@ interface SubMenuItemProp {
 
 interface NavBarItemProps {
   name?: string;
-  children ?: React.ReactNode;
+  children?: React.ReactNode;
   href?: string;
   subMenuItems?: SubMenuItemProp[];
 }
 
 export default function NavBarItem({ name, children, href, subMenuItems = [] }: NavBarItemProps) {
-  const renderNavItem = useCallback(() => {
+  const renderNavItem = () => {
     return (
       <Link href={href as string} className='text-sm font-semibold leading-6 text-gray-900  dark:text-white'>
         {children ?? name}
       </Link>
     );
-  }, [children, href, name]);
+  };
 
-  const renderPopoverNavItem = useCallback(() => {
+  const renderPopoverNavItem = () => {
     return (
       <Popover className='relative'>
         <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900  dark:text-white'>
@@ -63,7 +63,7 @@ export default function NavBarItem({ name, children, href, subMenuItems = [] }: 
         </Transition>
       </Popover>
     );
-  }, [name, subMenuItems]);
+  }
 
   return <div>{subMenuItems.length > 0 ? renderPopoverNavItem() : renderNavItem()}</div>;
 }
