@@ -1,5 +1,5 @@
 import { Base } from './base';
-import { Tag } from './post';
+import { Metrics, Tag } from './post';
 
 interface Project extends Base {
   title: string;
@@ -10,6 +10,8 @@ interface Project extends Base {
   pinned?: boolean;
   published?: boolean;
   tags?: Tag[];
+  metrics ?: Metrics;
 }
 
 export type { Project };
+

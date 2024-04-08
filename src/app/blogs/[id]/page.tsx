@@ -2,6 +2,7 @@ import Breadcrumb from "components/breadcrumb";
 import TagChipList from "components/chip/TagChipList";
 import MDRender from "components/MDRender";
 import matter from "gray-matter";
+import EyeIcon from "icons/EyeIcon";
 import { Post } from "models/post";
 import { getBlogById } from "services/blogServices";
 import { estimateReadingDuration } from "utils/mdConfig";
@@ -24,8 +25,13 @@ export default async function Page({ params }: { params: { id: string } }) {
                     { href: `/blogs/${id}`, name: blog?.title as string },
                 ]}
             />
-
             <p className='flex text-3xl'>{blog?.title}</p>
+            <div className="flex gap-x-1">
+                <div>Zhengliang Wang edited at {formatDate(blog.updatedAt as string)}</div>
+                <div className="flex gap-x-1">
+                    <EyeIcon />{blog.metrics?.views} views
+                </div>
+            </div>
             <p className='flex items-center justify-center gap-2 text-xs leading-5 text-gray-500'>
                 <span>last updated at: {formatDate(blog?.updatedAt ?? '0')}</span>
                 {readingDuration && <span className='text-xs leading-5 text-gray-500'>{readingDuration}</span>}

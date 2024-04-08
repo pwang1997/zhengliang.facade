@@ -1,9 +1,11 @@
 import Breadcrumb from "components/breadcrumb";
 import TagChipList from "components/chip/TagChipList";
 import MDRender from "components/MDRender";
+import EyeIcon from "icons/EyeIcon";
 import { Project } from "models/project";
 import { fetchReadMe } from "services/githubServices";
 import { getProjectById } from "services/projectServices";
+import { formatDate } from "utils/misc-utils";
 import { demoUrl, sourceCodeUrl } from "../components/ProjectCard";
 
 const Page = async ({ params }: { params: { id: string } }) => {
@@ -23,6 +25,12 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <span className="text-5xl font-extrabold dark:text-white">
           {project?.title}
         </span>
+      </div>
+      <div className="flex gap-x-1">
+        <div>Zhengliang Wang edited at {formatDate(project.updatedAt as string)}</div>
+        <div className="flex gap-x-1">
+          <EyeIcon />{project.metrics?.views} views
+        </div>
       </div>
       <div className="md:container md:mx-auto px-4 py-8">
         <span>{project?.summary}</span>
