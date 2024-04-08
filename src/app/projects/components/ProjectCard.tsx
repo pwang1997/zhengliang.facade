@@ -28,7 +28,8 @@ export const sourceCodeUrl = (url: string) => {
 
 export const projectCard = (project: Project) => {
   return (
-    <div className="max-w-xs w-72 rounded flex flex-col gap-3 px-4 overflow-hidden shadow-lg bg-white dark:bg-medium dark:text-white dark:border-slate-300/75   border-2">
+    <div className="max-w-xs w-72 rounded flex flex-col gap-3 px-4 overflow-hidden shadow-lg hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover 
+    dark:border-slate-300/75 border-1">
       <div>
         <div className="font-bold text-xl my-2 line-clamp-1 dark:bg-medium dark:text-white">
           <Link href={`/projects/${project.id}`} className="underline">

@@ -9,7 +9,7 @@ import { demoUrl, sourceCodeUrl } from "../components/ProjectCard";
 const Page = async ({ params }: { params: { id: string } }) => {
   const project = (await getProjectById(params?.id))?.data as Project ?? [];
 
-  const readMe = await fetchReadMe(project?.sourceCodeUrl) ?? '';
+  const readMe = project?.sourceCodeUrl ? await fetchReadMe(project?.sourceCodeUrl) : '';
 
   return (
     <>
@@ -19,13 +19,10 @@ const Page = async ({ params }: { params: { id: string } }) => {
           { href: `/projects/${params.id}`, name: project?.title as string },
         ]}
       />
-      <div className="flex justify-center content-center ">
+      <div className="flex content-center ">
         <span className="text-5xl font-extrabold dark:text-white">
           {project?.title}
         </span>
-      </div>
-      <div className="flex gap-2 m-2">
-        <TagChipList tags={project?.tags ?? []} />
       </div>
       <div className="md:container md:mx-auto px-4 py-8">
         <span>{project?.summary}</span>
@@ -41,6 +38,8 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
         {!!project?.demoUrl && demoUrl(project?.demoUrl)}
       </div >
+      <hr />
+      <TagChipList tags={project?.tags ?? []} />
     </>
   );
 };

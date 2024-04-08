@@ -25,17 +25,16 @@ export default async function Page({ params }: { params: { id: string } }) {
                 ]}
             />
 
-            <p className='flex justify-center text-3xl'>{blog?.title}</p>
+            <p className='flex text-3xl'>{blog?.title}</p>
             <p className='flex items-center justify-center gap-2 text-xs leading-5 text-gray-500'>
                 <span>last updated at: {formatDate(blog?.updatedAt ?? '0')}</span>
                 {readingDuration && <span className='text-xs leading-5 text-gray-500'>{readingDuration}</span>}
             </p>
-
-            <TagChipList tags={blog?.tags ?? []} />
-            <hr />
             <div className="container mx-auto py-8">
                 <MDRender content={content as string} />
             </div >
+            <hr />
+            <TagChipList tags={blog?.tags ?? []} />
         </>
     );
 }
