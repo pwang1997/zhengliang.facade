@@ -1,7 +1,6 @@
 "use client";
 
 import Button from "components/button/Button";
-import RectangleGroupIcon from "icons/RectangleGroupIcon";
 import { useState } from "react";
 
 export interface CategoryPanelDataProp {
@@ -19,9 +18,7 @@ export default function CategoryPanel({ data, handleOnClick }: CategoryPanelProp
         <div className="flex flex-col gap-6 max-w-sm  min-w-full">
             <div className="flex flex-col gap-4 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
                 <div>
-                    <button className='flex gap-1' onClick={() => setShow(!show)}>
-                        <RectangleGroupIcon /> Categories
-                    </button>
+                    <button onClick={() => setShow(!show)}>Categories</button>
                 </div>
 
                 <div className={`flex flex-wrap gap-2 ${!show && 'hidden'}`}>

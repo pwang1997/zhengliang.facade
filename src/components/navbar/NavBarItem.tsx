@@ -19,8 +19,10 @@ interface NavBarItemProps {
 export default function NavBarItem({ name, children, href, subMenuItems = [] }: NavBarItemProps) {
   const renderNavItem = () => {
     return (
-      <Link href={href as string} className='text-sm font-semibold leading-6 text-gray-900  dark:text-white'>
-        {children ?? name}
+      <Link href={href as string} className='text-sm flex items-center font-semibold rounded-lg p-2 hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover'>
+        <button>
+          {children ?? name}
+        </button>
       </Link>
     );
   };
@@ -28,7 +30,7 @@ export default function NavBarItem({ name, children, href, subMenuItems = [] }: 
   const renderPopoverNavItem = () => {
     return (
       <Popover className='relative'>
-        <Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900  dark:text-white'>
+        <Popover.Button className='flex items-center text-sm font-semibold leading-6 rounded-lg hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover'>
           {name}
           <ChevronDownIcon className='h-5 w-5 flex-none text-gray-400' aria-hidden='true' />
         </Popover.Button>
@@ -47,10 +49,10 @@ export default function NavBarItem({ name, children, href, subMenuItems = [] }: 
               {subMenuItems?.map((item: SubMenuItemProp) => (
                 <div
                   key={item.name}
-                  className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 dark:bg-dark dark:text-white dark:hover:bg-slate-500'
+                  className='group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover'
                 >
                   <div className='flex-auto'>
-                    <Link href={item.href as string} className='block font-semibold text-gray-900  dark:text-white'>
+                    <Link href={item.href as string} className='block font-semibold hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover'>
                       {item.name}
                       <span className='absolute inset-0' />
                     </Link>

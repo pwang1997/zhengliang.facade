@@ -1,4 +1,3 @@
-import RectangleGroupIcon from "icons/RectangleGroupIcon";
 import { SystemMetrics } from "models/base";
 import { fetchSystemMetrics } from "services/systemMetricsServices";
 import { mergeLists } from "utils/misc-utils";
@@ -11,9 +10,7 @@ export default async function CategoryMetricsPanel() {
 
     return (
         <div>
-            <div className="flex gap-1">
-                <RectangleGroupIcon /> Categories
-            </div>
+            <p>Categories</p>
 
             {merged.map((item: { name: string; count: number }) => {
                 return (
