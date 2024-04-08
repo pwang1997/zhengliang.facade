@@ -4,10 +4,9 @@ import CategoryPanel, { CategoryPanelDataProp } from "components/category-panel"
 import { Tag } from "models/post";
 import { Project } from "models/project";
 import { useCallback, useMemo, useState } from "react";
-import { projectCard } from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 export default function ProjectsContent({ projects, projectTagUsage }: { projects: Project[], projectTagUsage: CategoryPanelDataProp[] }) {
-
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
     const simpleProjects = useMemo(() =>
         projects.reduce((acc: any, curProject: any) => {
@@ -30,10 +29,10 @@ export default function ProjectsContent({ projects, projectTagUsage }: { project
         const filteredProjects = projects.filter((project) => selectedProjectIds.includes(project.id))
         return (
             <>
-                {filteredProjects?.map((project: Project) => {
+                {filteredProjects?.map((project: Project, idx : number) => {
                     return (
                         <div className="project-card-container" key={project.id}>
-                            {projectCard(project)}
+                            <ProjectCard project={project} timeout={400 * idx} />
                         </div>
                     );
                 })}
@@ -47,7 +46,7 @@ export default function ProjectsContent({ projects, projectTagUsage }: { project
                 <CategoryPanel data={projectTagUsage} handleOnClick={handleOnClick} />
             </div>
 
-            <div className="card-container container flex gap-2 m-2 grow flex-wrap gap-x-6 gap-y-2">
+            <div className="card-container container flex gap-2 m-2 grow flex-wrap gap-x-6 gap-y-2 content-center">
                 {renderProjectCards()}
             </div>
         </div>

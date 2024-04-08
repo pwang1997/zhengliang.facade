@@ -31,11 +31,8 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <div className="flex gap-x-1">
                     <EyeIcon />{blog.metrics?.views} views
                 </div>
+                {readingDuration && <span className='text-dark dark:text-white'>{readingDuration}</span>}
             </div>
-            <p className='flex items-center justify-center gap-2 text-xs leading-5 text-gray-500'>
-                <span>last updated at: {formatDate(blog?.updatedAt ?? '0')}</span>
-                {readingDuration && <span className='text-xs leading-5 text-gray-500'>{readingDuration}</span>}
-            </p>
             <div className="container mx-auto py-8">
                 <MDRender content={content as string} />
             </div >
