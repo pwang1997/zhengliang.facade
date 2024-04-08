@@ -1,28 +1,46 @@
 import Footer from "components/footer";
 import NavBar from "components/navbar";
+import TypeWriter from "components/type-writer";
+import GitHubIcon from "icons/GitHubIcon";
+import { GmailIcon } from "icons/GmailIcon";
+import MediumIcon from "icons/MediumIcon";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <>
       <NavBar />
-      <div className='content container min-h-screen max-w-4xl flex-grow pt-4 lg:mx-auto'>
+      <div className='content container min-h-screen max-w-4xl flex-grow lg:mx-auto pt-10'>
         <div className=" flex justify-center">
-          <div className="typewriter">
-            <p className=" text-lg">Welcome to <b>FACADE</b>.</p>
-            <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
-              The name <b>Facade</b> came from the idea of <a href="https://refactoring.guru/design-patterns/facade" className=" underline">Facade design pattern</a>.
-            </dt>
-            <br />
-            I am a software engineer who loves to build and experience novel technologies. My tech stack mainly falls
-            under the Java & Spring domain. My work and projects primarily involve Spring Boot, Docker, Redis, MySQL,
-            and Message Queues (Kafka / RabbitMQ).
-            <br /><br />
-            Here you will find my working projects, blogs about technologies, lee..eetcode solutions, and interesting issues I encountered from work.
+          <div className="introduction">
+            <p className=" text-6xl pb-4">Welcome to Facade!</p>
+            <p className="typewriter text-3xl">
+              <TypeWriter strings={['I Am A Software Developer']} />
+            </p>
+            <p className="text-xl pb-4">who loves to build and experience novel technologies.</p>
+            <p className="text-xl pb-4">My tech stack mainly falls
+              under the Java & Spring domain. My work and projects primarily involve Spring Boot, Docker, Redis, MySQL,
+              and Message Queues (Kafka / RabbitMQ).</p>
+            <p className="text-md">
+              Here you will find my working projects, blogs about technologies, leetcode solutions, and interesting issues I encountered from work.
+            </p>
           </div>
         </div>
-        <hr />
-        <div className="flex justify-center">
-          Powered by Next.js, Spring Boot, Docker and AWS
+
+        <div id="">
+
+        </div>
+
+        <div className="flex gap-4" id="contact">
+          <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-1" href="https://github.com/pwang1997">
+            <GitHubIcon />
+          </Link>
+          <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-1" href="mailto:wzlpuck@gmail.com">
+            <GmailIcon />
+          </Link>
+          <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-1" href="https://medium.com/@zhengliang_puck_wang">
+            <MediumIcon />
+          </Link>
         </div>
       </div>
       <Footer />
