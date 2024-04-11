@@ -21,8 +21,8 @@ export default function Footer() {
                         <Link href="/about#contact" className="hover:underline">Contact</Link>
                     </li>
                     <li>
-                        <Link className='flex justify-center items-center pl-4 text-sm font-semibold leading-6 text-gray-900 dark:text-white' href="https://github.com/pwang1997">
-                                <GitHubIcon />
+                        <Link className='flex justify-center items-center pl-4 text-sm font-semibold leading-6 text-gray-900 dark:text-white' href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'pwang1997'}`}>
+                            <GitHubIcon />
                         </Link>
                     </li>
                 </ul>
