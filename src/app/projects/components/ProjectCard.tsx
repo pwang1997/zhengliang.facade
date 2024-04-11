@@ -1,33 +1,9 @@
 'use client';
 
 import TagChipList from "components/chip/TagChipList";
-import CloudArrowIcon from "icons/CloudArrowIcon";
-import GitHubIcon from "icons/GitHubIcon";
 import { Project } from "models/project";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-export const demoUrl = (url: string) => {
-  return (
-    <div className="flex">
-      <div>
-        <CloudArrowIcon />
-      </div>
-      <a href={`https://${url}`}>Demo</a>
-    </div>
-  );
-};
-
-export const sourceCodeUrl = (url: string) => {
-  return (
-    <div className="flex">
-      <div>
-        <GitHubIcon />
-      </div>
-      <a href={`https://${url}`}>Source Code</a>
-    </div>
-  );
-};
 
 export default function ProjectCard({ project, timeout }: { project: Project, timeout: number }) {
   const [show, setShow] = useState(false);
@@ -44,7 +20,7 @@ export default function ProjectCard({ project, timeout }: { project: Project, ti
         dark:border-slate-300/75 border-1 animated`}>
             <div>
               <div className="font-bold text-xl my-2 line-clamp-1 dark:bg-medium dark:text-white">
-                <Link href={`github.com/${project?.sourceCodeUrl}`} className="underline">
+                <Link href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'pwang1997'}/${project?.sourceCodeUrl}`} className="underline">
                   {project.title}
                 </Link>
               </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import MoonIcon from "icons/MoonIcon";
+import { MoonIcon } from "@heroicons/react/20/solid";
 import SunIcon from "icons/SunIcon";
 import { useEffect, useState } from "react";
 
