@@ -1,5 +1,6 @@
 import Breadcrumb from "components/breadcrumb";
 import TagChipList from "components/chip/TagChipList";
+import Comment from "components/comment";
 import MDRender from "components/MDRender";
 import matter from "gray-matter";
 import EyeIcon from "icons/EyeIcon";
@@ -38,6 +39,8 @@ export default async function Page({ params }: { params: { id: string } }) {
             </div >
             <hr />
             <TagChipList tags={blog?.tags ?? []} />
+            <hr />
+            <Comment />
         </>
     );
 }
