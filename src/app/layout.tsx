@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   title: "HomePage"
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark:bg-medium dark:text-white`}>
+      <body className={`${inter.className} dark:bg-dark dark:text-white`}>
         {children}
       </body>
     </html>

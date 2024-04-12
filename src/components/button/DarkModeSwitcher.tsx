@@ -1,6 +1,6 @@
 'use client';
 
-import MoonIcon from "icons/MoonIcon";
+import { MoonIcon } from "@heroicons/react/20/solid";
 import SunIcon from "icons/SunIcon";
 import { useEffect, useState } from "react";
 
@@ -27,13 +27,16 @@ export default function DarkModeSwitcher() {
         }
     }, [darkMode])
     return (
-        <div className="relative w-16 h-8 flex item-center
-       dark:bg-gray-900 bg-teal-500 cursor-pointer rounded-full p-1"
+        <div className="relative w-8 h-8 flex item-center
+        hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover 
+        cursor-pointer rounded-full p-1"
             onClick={() => setDarkMode(!darkMode)}>
-            <MoonIcon />
-            <div className={`absolute bg-white w-6 h-6 rounded-full shadow-md 
-            transform transition-transform duration-300`} style={darkMode ? { left: '2px' } : { right: '2px' }}></div>
-            <SunIcon clazzName="ml-auto text-yellow-400" />
+            {
+                darkMode ?
+                    <MoonIcon />
+                    :
+                    <SunIcon clazzName="text-yellow-400" />
+            }
         </div>
     )
 }

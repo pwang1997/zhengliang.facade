@@ -12,6 +12,13 @@ interface Post extends Base {
   pinned: boolean;
   tags?: Tag[];
   postMeta?: MetaData;
+  metrics ?: Metrics;
 }
 
-export type { Post, Tag };
+interface Metrics extends Base {
+  views : number;
+  likes : number
+}
+
+export type { Metrics, Post, Tag };
+

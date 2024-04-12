@@ -21,7 +21,8 @@
     "reading-duration": "^1.1.2",
     "rehype-highlight": "^7.0.0",
     "remark-gfm": "^4.0.0",
-    "tailwind-merge": "^2.2.1"
+    "tailwind-merge": "^2.2.1",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@headlessui/react": "^1.7.18",
