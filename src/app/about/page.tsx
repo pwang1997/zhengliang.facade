@@ -11,7 +11,7 @@ import Link from 'next/link';
 import DownloadableFileItem from './components/DownloadableFileItem';
 import Timeline from './components/Timeline';
 
-export default function AboutPage() {
+export default async function AboutPage() {
   return (
     <div>
       <Breadcrumb

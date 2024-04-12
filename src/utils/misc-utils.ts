@@ -68,3 +68,5 @@ export function partitionArray(array : any[], partition : number) {
   }
   return result;
 }
+
+export const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));

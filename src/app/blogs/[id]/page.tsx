@@ -32,12 +32,11 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <div className="flex gap-x-1">
                     <EyeIcon />{blog.metrics?.views} views
                 </div>
-                {readingDuration && <span className='text-dark dark:text-white'>{readingDuration}</span>}
             </div>
+            {readingDuration && <span className='text-dark dark:text-white'>{readingDuration}</span>}
             <div className="container mx-auto py-8">
                 <MDRender content={content as string} />
             </div >
-            <hr />
             <TagChipList tags={blog?.tags ?? []} />
             <hr />
             <Comment />
