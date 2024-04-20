@@ -8,12 +8,12 @@ export default function Footer() {
                 <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024. All Rights Reserved.
                 </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                    <li>
+                    {/* <li>
                         <Link href="/projects" className="hover:underline me-4 md:me-6">Projects</Link>
                     </li>
                     <li>
                         <Link href="/blogs" className="hover:underline me-4 md:me-6">Blogs</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/about" className="hover:underline me-4 md:me-6">About</Link>
                     </li>
