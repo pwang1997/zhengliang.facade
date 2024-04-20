@@ -2,12 +2,12 @@
 
 import MoonIcon from "icons/MoonIcon";
 import SunIcon from "icons/SunIcon";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function DarkModeSwitcher() {
     const [darkMode, setDarkMode] = useState<boolean>(
         typeof window !== 'undefined' ?
-            localStorage?.getItem("theme") === "dark" : true
+            localStorage?.getItem("theme") === "dark" : false
     );
 
     useEffect(() => {
@@ -26,17 +26,19 @@ export default function DarkModeSwitcher() {
             localStorage.setItem("theme", "light");
         }
     }, [darkMode])
+
+    const renderDarkModeIcon = useCallback(() => {
+        return (
+            darkMode ? <MoonIcon /> : <SunIcon />
+        )
+    }, [darkMode])
+
     return (
         <div className="relative w-8 h-8 flex item-center
         hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover 
         cursor-pointer rounded-full p-1"
             onClick={() => setDarkMode(!darkMode)}>
-            {
-                darkMode ?
-                    <MoonIcon />
-                    :
-                    <SunIcon clazzName="text-yellow-400" />
-            }
+            {renderDarkModeIcon()}
         </div>
     )
 }

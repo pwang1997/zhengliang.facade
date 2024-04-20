@@ -3,6 +3,7 @@ import CloudArrowIcon from 'icons/CloudArrowIcon';
 import GitHubIcon from 'icons/GitHubIcon';
 import { GmailIcon } from 'icons/GmailIcon';
 import GraduationIcon from 'icons/GraduationIcon';
+import LinkedInIcon from 'icons/LinkedInIcon';
 import MapPinIcon from 'icons/MapPinIcon';
 import MediumIcon from 'icons/MediumIcon';
 import UserIcon from 'icons/UserIcon';
@@ -10,7 +11,7 @@ import Link from 'next/link';
 import DownloadableFileItem from './components/DownloadableFileItem';
 import Timeline from './components/Timeline';
 
-export default function AboutPage() {
+export default async function AboutPage() {
   return (
     <div>
       <Breadcrumb
@@ -56,14 +57,22 @@ export default function AboutPage() {
               </div>
             </dt>
             <dd className='flex gap-4'>
-              <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-2" href="https://github.com/pwang1997">
+              <Link className='hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-2'
+                href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'pwang1997'}`}>
                 <GitHubIcon />
               </Link>
-              <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-2" href="mailto:wzlpuck@gmail.com">
+              <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-2"
+                href={`mailto:${process.env.NEXT_PUBLIC_EMAIL_TO || 'wzlpuck@gmail.com'}`}>
                 <GmailIcon />
               </Link>
-              <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-2" href="https://medium.com/@zhengliang_puck_wang">
+              <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-2"
+                href={`https://medium.com/${process.env.NEXT_PUBLIC_MEDIUM_USERNAME || '@zhengliang_puck_wang'} `}>
                 <MediumIcon />
+              </Link>
+
+              <Link className="hover:bg-white-hover dark:bg-dark dark:text-white dark:hover:bg-dark-hover rounded-lg p-2"
+                href={`https://www.linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN_USERNAME || 'puck-wang-2020'}/`}>
+                <LinkedInIcon />
               </Link>
             </dd>
           </div>

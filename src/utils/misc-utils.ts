@@ -55,3 +55,18 @@ export function mergeLists(list1: any[], list2: any[]): any[] {
 }
 
 export const isSubset = (arr1: any[], arr2: any[]) => arr1.some((item: any) => arr2.includes(item));
+
+export function partitionArray(array : any[], partition : number) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if(i < partition) {
+      result.push([array[i]]);
+    } else {
+      result[i%partition].push(array[i])
+    }
+  }
+  return result;
+}
+
+export const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
