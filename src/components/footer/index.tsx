@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import GitHubIcon from "icons/GitHubIcon";
 import Link from "next/link";
 
@@ -27,6 +29,8 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
+            <Analytics />
+            <SpeedInsights />
         </footer>
 
     )

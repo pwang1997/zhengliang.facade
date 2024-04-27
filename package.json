@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@types/react-syntax-highlighter": "^15.5.11",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "clsx": "^2.1.0",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
