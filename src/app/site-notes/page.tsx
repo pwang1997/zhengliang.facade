@@ -10,7 +10,7 @@ export default function Page() {
         ]}
       />
 
-      <div className='max-w-md divide-y divide-gray-200 text-gray-900 dark:divide-gray-700 dark:text-white  min-w-full'>
+      <div className='max-w-md divide-y divide-gray-200 text-gray-900 dark:divide-gray-700 dark:text-white min-w-full py-6'>
         {
           notes.map((item: { date: string, text: string }) => {
             return (
