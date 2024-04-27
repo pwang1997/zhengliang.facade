@@ -12,7 +12,7 @@ This is my first iteration of blog/portfolio project. It will require backend su
 
 If you like the project, feel free to give a ⭐.
 
-![demo](https://raw.githubusercontent.com/pwang1997/zhengliang.facade/tree/main/public/image/storefront.png)
+![demo](https://github.com/pwang1997/zhengliang.facade/blob/main/public/image/storefront.png)
 
 ### Components
 - [x] Projects
