@@ -18,7 +18,12 @@ const config: Config = {
         "dark" : 'rgb(15 23 42)',
         "dark-hover" : 'rgb(30 41 59)',
         "white" : 'rgb(241 245 249)',
-        'white-hover' : 'rgb(226 232 240)'
+        'white-hover' : 'rgb(226 232 240)',
+
+        "dark-primary" : 'rgb(15 23 42)',
+        "dark-second" : 'rgb(30 41 59)',
+        "bright-primary" : 'rgb(241 245 249)',
+        'bright-second' : 'rgb(226 232 240)'
       }
     }
   },

@@ -38,7 +38,7 @@ export default function BlogItem({ blog, timeout }: { blog: Post; timeout: numbe
                   <a href={`/blogs/${blog.id}`}>{blog.title} </a>
                 </p>
 
-                <Link className='text-sm font-semibold leading-6  text-gray-500 dark:bg-medium dark:text-white' href={`/blogs/${blog.id}`}>
+                <Link className='text-sm font-semibold leading-6  text-gray-500 dark:bg-medium dark:text-white pr-2' href={`/blogs/${blog.id}`}>
                   Learn More
                 </Link>
               </div>
@@ -54,7 +54,7 @@ export default function BlogItem({ blog, timeout }: { blog: Post; timeout: numbe
                 </div>
                 <div>
 
-                  {readingDuration && <p className='mt-1 truncate text-xs leading-5 text-gray-500 dark:bg-medium dark:text-white'>{readingDuration}</p>}
+                  {readingDuration && <p className='mt-1 truncate text-xs leading-5 text-gray-500 dark:bg-medium dark:text-white pr-2'>{readingDuration}</p>}
                 </div>
               </div>
             </div>
