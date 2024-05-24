@@ -35,7 +35,7 @@ export default function BlogsContent({ blogs, postTagUsage }: { blogs: Post[], p
         return (
             <>
                 {filteredPosts.map((blog: Post, idx : number) => (
-                    <li key={blog.title} className='block w-full justify-between gap-x-6 py-5'>
+                    <li key={blog.title} className='block w-full justify-between gap-x-6 py-5 rounded hover:bg-bright-second dark:hover:bg-dark-second'>
                         <BlogItem blog={blog} timeout={400 * (idx)} />
                     </li>
                 ))}

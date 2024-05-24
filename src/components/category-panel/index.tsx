@@ -15,10 +15,10 @@ export default function CategoryPanel({ data, handleOnClick }: CategoryPanelProp
     const [show, setShow] = useState(false);
 
     return (
-        <div className="flex flex-col gap-6 max-w-sm  min-w-full">
-            <div className="flex flex-col gap-4 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+        <div className="flex flex-col pb-4">
+            <div className="flex flex-col gap-4 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
                 <div>
-                    <button onClick={() => setShow(!show)}>Categories</button>
+                    <button className="w-full text-left" onClick={() => setShow(!show)}>Filters</button>
                 </div>
 
                 <div className={`flex flex-wrap gap-2 ${!show && 'hidden'}`}>
