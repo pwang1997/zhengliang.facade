@@ -1,5 +1,3 @@
-import Footer from "components/footer";
-import NavBar from "components/navbar";
 import TypeWriter from "components/type-writer";
 import AWSIcon from "icons/AWSIcon";
 import DockerIcon from "icons/DockerIcon";
@@ -23,7 +21,7 @@ import Link from "next/link";
 export default function Page() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className='content container min-h-screen max-w-4xl flex-grow lg:mx-auto pt-10'>
         <div className=" flex justify-center">
           <div className="introduction">
@@ -96,7 +94,6 @@ export default function Page() {
           </Link>
         </div>
       </div>
-      <Footer />
     </>
 
   )
