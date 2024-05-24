@@ -27,11 +27,11 @@ export default function Page() {
       <div className='content container min-h-screen max-w-4xl flex-grow lg:mx-auto pt-10'>
         <div className=" flex justify-center">
           <div className="introduction">
-            <p className=" text-4xl pb-4">Welcome to Facade!</p>
-            <p className="typewriter text-3xl">
+            <p className=" text-4xl pb-4">Welcome to my blog!</p>
+            <p className="typewriter text-5xl">
               <TypeWriter strings={['I am a Software Developer']} />
             </p>
-            <p className="text-xl pb-4">who loves to build and experience novel technologies.</p>
+            <p className="text-2xl pb-4">who loves to build and experience novel technologies.</p>
             <p className="text-xl font-bold pb-4">Tech Stack:</p>
             <div className="flex flex-col gap-4">
               <div>
