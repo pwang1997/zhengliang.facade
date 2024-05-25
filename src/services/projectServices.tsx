@@ -1,7 +1,7 @@
 import { PROJECT_ENDPOINT } from "utils/restUtils";
 
 export async function listProjects() {
-  const response = await fetch(`${PROJECT_ENDPOINT}/list`, { next: { revalidate: 3600 } });
+  const response = await fetch(`${PROJECT_ENDPOINT}/list`, { next: { revalidate: 1800 } });
   const data = await response.json();
   return data;
 }
