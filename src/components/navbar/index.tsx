@@ -33,6 +33,7 @@ export default function NavBar() {
         <Popover.Group className='hidden lg:flex lg:gap-x-12 items-center'>
           <NavBarItem name='Projects' href='/projects' />
           <NavBarItem name='Blogs' href='/blogs' />
+          <NavBarItem name='Graphics' href='/graphics' />
           <NavBarItem name='About' href='/about' />
           <NavBarItem name='Site Notes' href='/site-notes' />
           <NavBarItem href='https://github.com/pwang1997'>
