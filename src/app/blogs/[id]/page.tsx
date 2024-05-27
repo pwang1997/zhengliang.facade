@@ -20,12 +20,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
     return (
         <>
-            <Breadcrumb
-                breadcrumbs={[
-                    { href: '/blogs', name: 'Blogs' },
-                    { href: `/blogs/${id}`, name: blog?.title as string },
-                ]}
-            />
+            <Breadcrumb />
             <p className='flex text-3xl'>{blog?.title}</p>
             <div className="flex gap-x-1">
                 <div>Zhengliang Wang edited at {formatDate(blog.updatedAt as string)}</div>

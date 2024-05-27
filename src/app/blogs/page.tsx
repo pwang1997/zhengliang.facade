@@ -17,7 +17,7 @@ export default async function Page() {
     return (
         <div className="container flex flex-col gap-4">
             <div>
-                <Breadcrumb breadcrumbs={[{ href: '/blogs', name: 'Blogs' }]} />
+                <Breadcrumb />
             </div>
             <div className="flex min-w-full gap-4">
                 <BlogsContent blogs={blogs} postTagUsage={postTagUsage} />

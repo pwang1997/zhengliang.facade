@@ -18,7 +18,7 @@ const Page = async () => {
     return (
         <div className="container flex flex-col gap-4">
             <div>
-                <Breadcrumb breadcrumbs={[{ href: '/graphics', name: 'Graphics' }]} />
+                <Breadcrumb />
             </div>
 
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-10">

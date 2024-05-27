@@ -15,14 +15,16 @@ const Page = async () => {
   const projectTagUsage = countUsage?.projects as CategoryPanelDataProp[];
 
   return (
-    <div className="container flex flex-col gap-4">
-      <div>
-        <Breadcrumb breadcrumbs={[{ href: '/projects', name: 'Projects' }]} />
-      </div>
-      <div className="flex min-w-full gap-4">
-        <ProjectsContent projects={projects} projectTagUsage={projectTagUsage} />
-        <div className="side-panel">
-          <BundledMetricsPanel />
+    <div className='content container min-h-screen max-w-7xl flex-grow pt-4 lg:mx-auto'>
+      <div className="container flex flex-col gap-4">
+        <div>
+          <Breadcrumb />
+        </div>
+        <div className="flex min-w-full gap-4">
+          <ProjectsContent projects={projects} projectTagUsage={projectTagUsage} />
+          <div className="side-panel">
+            <BundledMetricsPanel />
+          </div>
         </div>
       </div>
     </div>
