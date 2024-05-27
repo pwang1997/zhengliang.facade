@@ -15,7 +15,7 @@ export default function NavBar() {
 
   return (
     <header className='w-full sticky top-0 backdrop-blur transition-[background-color,border-width] border-x-0 flex justify-center z-10 pt-4'>
-      <nav className='mx-auto flex max-w-7xl items-center justify-between w-1/2 rounded-[24px] pl-4 pr-4 pt-2 pb-2
+      <nav className='mx-auto flex max-w-4xl items-center justify-between  rounded-[24px] pl-4 pr-4 pt-2 pb-2
       bg-neutral-100 dark:bg-dark dark:text-white
       ' aria-label='Global'>
         <div className='flex lg:flex-1'>
@@ -30,7 +30,7 @@ export default function NavBar() {
           <SearchModal setShow={setShow} />
         }
 
-        <Popover.Group className='hidden lg:flex lg:gap-x-12 items-center'>
+        <Popover.Group className='hidden lg:flex lg:gap-x-4 items-center justify-end ml-4'>
           <NavBarItem name='Projects' href='/projects' />
           <NavBarItem name='Blogs' href='/blogs' />
           <NavBarItem name='Graphics' href='/graphics' />
