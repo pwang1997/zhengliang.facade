@@ -24,9 +24,18 @@ const config: Config = {
         "dark-second" : 'rgb(30 41 59)',
         "bright-primary" : 'rgb(241 245 249)',
         'bright-second' : 'rgb(226 232 240)'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 2s ease-in-out',
       }
     }
   },
-  plugins: [require('@tailwindcss/typography')],
+   plugins: [require('@tailwindcss/typography')],
 };
 export default config;

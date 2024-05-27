@@ -2,7 +2,7 @@ import TypeWriter from "components/type-writer";
 import AWSIcon from "icons/AWSIcon";
 import DockerIcon from "icons/DockerIcon";
 import FirebaseIcon from "icons/FirebaseIcon";
-import GolangIcon from "icons/GoLangIcon";
+import GolangIcon from "icons/GolangIcon";
 import HtmlIcon from "icons/HtmlIcon";
 import JavaScriptIcon from "icons/JavaScriptIcon";
 import MuiIcon from "icons/MuiIcon";

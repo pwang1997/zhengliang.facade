@@ -17,12 +17,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     }
     return (
         <div>
-            <Breadcrumb
-                breadcrumbs={[
-                    { href: '/graphics', name: 'Graphics' },
-                    { href: `/graphics/${id}`, name: `${id}` },
-                ]}
-            />
+            <Breadcrumb />
             <div>
                 {pageContent()}
             </div>
