@@ -7,10 +7,16 @@ async function listBlogs() {
 }
 
 async function getBlogById(id: number | string) {
-  const response = await fetch(`${BLOG_ENDPOINT}/${id}`, { next: { revalidate: 3600 } });
+  const response = await fetch(`${BLOG_ENDPOINT}/${id}`, { cache: "no-cache" });
   const data = await response.json();
   return data;
 }
 
-export { getBlogById, listBlogs };
+async function searchBlogs(query: string) {
+    const response = await fetch(`${BLOG_ENDPOINT}/search?query=${query}`, { next: { revalidate: 1800 } });
+    const data = await response.json();
+    return data;
+}
+
+export { getBlogById, listBlogs, searchBlogs };
 
