@@ -1,5 +1,6 @@
 "use client";
 
+import { HomeIcon } from '@heroicons/react/20/solid';
 import RightArrowIcon from 'icons/RightArrowIcon';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -36,7 +37,7 @@ export default function Breadcrumb() {
             href='/'
             className='inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white'
           >
-            Home
+            <HomeIcon width={20} height={20}/>
           </Link>
         </li>
         {
