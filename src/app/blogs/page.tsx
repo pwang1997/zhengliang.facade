@@ -8,7 +8,7 @@ export default async function Page() {
     const blogs = (await listBlogs())?.data as Post[]
 
     return (
-        <div className='content container h-[calc(100vh-64px)] max-w-7xl flex-grow pt-4 lg:mx-auto'>
+        <div className='content container h-[calc(100vh-64px)] max-w-5xl flex-grow pt-4 lg:mx-auto'>
             <div className="container flex flex-col gap-4">
                 <Breadcrumb />
                 <div className="flex min-w-full gap-4">
