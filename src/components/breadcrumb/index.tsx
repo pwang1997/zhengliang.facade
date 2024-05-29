@@ -7,20 +7,24 @@ import { usePathname } from 'next/navigation';
 
 function BreadcrumbItem({ href, name, isLastItem }: { href: string; name: string; isLastItem: boolean }) {
   return (
-    <>
-      {!isLastItem && (
-        <li className='inline-flex items-center'>
-          <a
-            href={`/${href}`}
-            className=' capitalize inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white'
-          >
-            <RightArrowIcon />
-            {name}
-          </a>
-        </li>
+    <li className='inline-flex items-center'>
+      {isLastItem ? (
+        <p
+          className=' capitalize inline-flex items-center text-sm font-medium text-gray-700  dark:text-gray-400'
+        >
+          <RightArrowIcon />
+          {name}
+        </p>
+      ) : (
+        <a
+          href={`/${href}`}
+          className=' capitalize inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white'
+        >
+          <RightArrowIcon />
+          {name}
+        </a>
       )}
-    </>
-
+    </li>
   );
 }
 export default function Breadcrumb() {
@@ -37,7 +41,7 @@ export default function Breadcrumb() {
             href='/'
             className='inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white'
           >
-            <HomeIcon width={20} height={20}/>
+            <HomeIcon width={20} height={20} />
           </Link>
         </li>
         {
