@@ -10,7 +10,7 @@ function BreadcrumbItem({ href, name, isLastItem }: { href: string; name: string
     <li className='inline-flex items-center'>
       {isLastItem ? (
         <p
-          className=' capitalize inline-flex items-center text-sm font-medium text-gray-700  dark:text-gray-400'
+          className=' capitalize inline-flex items-center text-sm font-medium text-gray-700  dark:text-gray-400 gap-x-2'
         >
           <RightArrowIcon />
           {name}
@@ -18,7 +18,7 @@ function BreadcrumbItem({ href, name, isLastItem }: { href: string; name: string
       ) : (
         <a
           href={`/${href}`}
-          className=' capitalize inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white'
+          className=' capitalize inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white gap-x-2'
         >
           <RightArrowIcon />
           {name}

@@ -13,7 +13,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scoll-smooth">
       <body className={`dark:bg-dark dark:text-white`}>
         <NavBar />
         {children}

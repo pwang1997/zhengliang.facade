@@ -27,15 +27,21 @@ const config: Config = {
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': {
+             opacity: '0'
+           },
+          '100%': { 
+            opacity: '1'
+           },
         },
       },
       animation: {
-        fadeIn: 'fadeIn 2s ease-in-out',
+        fadeIn: 'fadeIn 2s both',
       }
     }
   },
-   plugins: [require('@tailwindcss/typography')],
+   plugins: [
+    require('@tailwindcss/typography')
+   ]
 };
 export default config;

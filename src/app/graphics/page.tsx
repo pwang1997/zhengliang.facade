@@ -16,7 +16,7 @@ const Page = async () => {
         )
     }
     return (
-        <div className="container flex flex-col gap-4 h-[calc(100vh-64px)] max-w-5xl flex-grow pt-4 mx-auto">
+        <div className="container flex flex-col gap-4 h-[calc(100vh-64px)] max-w-5xl flex-grow pt-4 mx-auto animate-fadeIn">
             <Breadcrumb />
 
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-10">

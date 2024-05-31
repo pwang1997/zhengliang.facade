@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function WhereToFindMe() {
     return (
-        <div className="flex justify-center items-center font-bold">
+        <div className="flex justify-start font-bold animate-fadeIn" style={{ animationDelay: `800ms`}}>
             Find Me On
             <div className="flex justify-center gap-4" id="contact">
                 <Link className='flex justify-center items-center pl-4 text-sm font-semibold leading-6 text-gray-900 dark:text-white' href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'pwang1997'}`}>

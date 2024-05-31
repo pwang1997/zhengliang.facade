@@ -19,9 +19,12 @@ import TailwindIcon from "icons/TailwindIcon";
 import TypeScriptIcon from "icons/TypeScriptIcon";
 
 export default function HeroSection() {
+    const skillItemClass = "flex items-center space-x-3 rtl:space-x-reverse animate-fadeIn";
+
     return (
         <div className="flex flex-col">
-            <div className="">
+            <div className="animate-fadeIn"
+             style={{ animationDelay: `200ms`}}>
                 <p className=" text-4xl pb-4 font-bold ">Welcome!</p>
                 <p className="text-3xl">I am Zhengliang(Puck) Wang</p>
                 <p className="typewriter text-2xl">
@@ -30,23 +33,23 @@ export default function HeroSection() {
             </div>
 
             <div>
-                <p className="text-xl font-bold py-4 capitalize">A bit about my Tech Stack:</p>
+                <p className="text-xl font-bold py-4 capitalize  animate-fadeIn"    style={{ animationDelay: `300ms`}}>A bit about my Tech Stack:</p>
                 <div className="flex flex-col gap-4">
                     <div>
-                        <p className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">* Frontend:</p>
+                        <p className="mb-2 text-lg font-semibold text-gray-900 dark:text-white animate-fadeIn" style={{ animationDelay: `300ms`}}>* Frontend:</p>
                         <ul className="text-left text-gray-500 dark:text-gray-400 capitalize">
-                            <li>
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `325ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     ✅ hands-on experience with <HtmlIcon /> HTML5 + <SassIcon /> Sass + <JavaScriptIcon /> JavaScript ES6
                                 </div>
                             </li>
-                            <li>
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `350ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     ✅ hands-on experience with <TypeScriptIcon /> TypeScript + <NextJsIcon /> Next.js + <TailwindIcon /> Tailwind CSS
                                 </div>
                             </li>
 
-                            <li>
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `375ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     ✅ Hands-on experience with <ReactIcon /> React + <ReactQueryIcon /> TanStack Query + <MuiIcon /> Material UI
                                 </div>
@@ -54,29 +57,29 @@ export default function HeroSection() {
                         </ul>
                     </div>
                     <div>
-                        <p className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">* Backend:</p>
+                        <p className="mb-2 text-lg font-semibold text-gray-900 dark:text-white animate-fadeIn" style={{ animationDelay: `400ms`}}>* Backend:</p>
                         <ul className="space-y-3 text-left text-gray-500 dark:text-gray-400 capitalize">
-                            <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `425ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     ✅ Familiar with Distributed system development using <SpringIcon /> Spring Cloud modules
                                 </div>
                             </li>
-                            <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `450ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     ✅ Years of experience in <SpringIcon /> Spring Boot + <RedisIcon /> Redis + <MySQLIcon /> MySQL
                                 </div>
                             </li>
-                            <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `475ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     ✅ Hands-on experience in <NodeJsIcon /> Node.js + <FirebaseIcon /> Firebase + <AWSIcon /> AWS
                                 </div>
                             </li>
-                            <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `500ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     ✅ Deployed multiple services using <DockerIcon /> Docker + <NginxIcon /> Nginx
                                 </div>
                             </li>
-                            <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                            <li className={`${skillItemClass}`} style={{ animationDelay: `525ms`}}>
                                 <div className="flex flex-row items-center gap-2">
                                     📖 Learning <GolangIcon /> Golang at the moment...
                                 </div>
@@ -86,7 +89,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <p className="pt-4 text-lg font-semibold">
+            <p className="pt-4 text-lg font-semibold  animate-fadeIn" style={{ animationDelay: `550ms`}}>
                 Here you will find my working projects, blogs about technologies, leetcode solutions, and interesting issues I encountered from work.
             </p>
         </div>

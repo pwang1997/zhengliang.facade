@@ -1,7 +1,9 @@
 export default function Timeline() {
+  const timeLineItemClass = "mb-10 ms-4  animate-fadeIn"
   return (
     <ol className='relative border-s border-gray-200 dark:border-gray-700'>
-      <li className='mb-10 ms-4'>
+      <li className={`${timeLineItemClass}`}
+      style={{ animationDelay: "200ms"}}>
         <div className='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700' />
         <time className='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
           January 2023 - December 2023
@@ -26,7 +28,8 @@ export default function Timeline() {
           <li>Conducted MySQL update and migrations for multiple microservices </li>
         </ul>
       </li>
-      <li className='mb-10 ms-4'>
+      <li className={`${timeLineItemClass}`}
+      style={{ animationDelay: "400ms"}}>
         <div className='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700' />
         <time className='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
           April 2023 - June 2023
@@ -47,7 +50,8 @@ export default function Timeline() {
         </ul>
       </li>
 
-      <li className='mb-10 ms-4'>
+      <li className={`${timeLineItemClass}`}
+      style={{ animationDelay: "600ms"}}>
         <div className='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700' />
         <time className='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
           May 2022 - August 2022
@@ -67,7 +71,8 @@ export default function Timeline() {
           </li>
         </ul>
       </li>
-      <li className='mb-10 ms-4'>
+      <li className={`${timeLineItemClass}`}
+      style={{ animationDelay: "800ms"}}>
         <div className='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700' />
         <time className='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
           September 2021 - June 2023
@@ -78,7 +83,8 @@ export default function Timeline() {
         </h3>
         <p className=" capitalize">Course work: Full-stack Cloud Computing, Distributed Database, Applied Data Science, Mobile Development, Natural Language Processing </p>
       </li>
-      <li className='ms-4'>
+      <li className={`${timeLineItemClass}`}
+      style={{ animationDelay: "1000ms"}}>
         <div className='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700' />
         <time className='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
           September 2018 - June 2020
