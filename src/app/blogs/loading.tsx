@@ -6,7 +6,7 @@ export default async function Loading() {
     return (
         <div className="container flex flex-col gap-4">
             <div>
-                <Breadcrumb breadcrumbs={[{ href: '/blogs', name: 'Blogs' }]} />
+                <Breadcrumb />
             </div>
             <div className="flex min-w-full gap-4">
                 <div className="main-container w-full">

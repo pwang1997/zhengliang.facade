@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
-  title: "Blogs | Zhengliang Wang"
+  title: "Graphics | Zhengliang Wang"
 };
+
 
 export default function RootLayout({
   children,
@@ -11,5 +12,5 @@ export default function RootLayout({
 }>) {
   return (
     <>{children}</>
-  );
+  )
 }

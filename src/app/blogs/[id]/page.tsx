@@ -19,13 +19,8 @@ export default async function Page({ params }: { params: { id: string } }) {
     const readingDuration = estimateReadingDuration(blog?.content);
 
     return (
-        <>
-            <Breadcrumb
-                breadcrumbs={[
-                    { href: '/blogs', name: 'Blogs' },
-                    { href: `/blogs/${id}`, name: blog?.title as string },
-                ]}
-            />
+        <div className="lg:container min-h-screen lg:mx-auto flex flex-col gap-2 p-4 m-4 w-full max-w-2xl dark:bg-medium dark:text-white">
+            <Breadcrumb />
             <p className='flex text-3xl'>{blog?.title}</p>
             <div className="flex gap-x-1">
                 <div>Zhengliang Wang edited at {formatDate(blog.updatedAt as string)}</div>
@@ -40,6 +35,6 @@ export default async function Page({ params }: { params: { id: string } }) {
             <TagChipList tags={blog?.tags ?? []} />
             <hr />
             <Comment />
-        </>
+        </div>
     );
 }

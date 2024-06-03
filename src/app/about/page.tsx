@@ -14,11 +14,7 @@ import Timeline from './components/Timeline';
 export default async function AboutPage() {
   return (
     <div>
-      <Breadcrumb
-        breadcrumbs={[
-          { href: '/about', name: 'About' }
-        ]}
-      />
+      <Breadcrumb />
       <div className='mt-6 border-t border-gray-100'>
         <dl className='divide-y divide-gray-100'>
           <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
@@ -28,7 +24,7 @@ export default async function AboutPage() {
                 <a href="#myself">About Myself</a>
               </div>
             </dt>
-            <dd className='mt-1 text-sm font-normal leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:bg-medium dark:text-white'>
+            <dd className='mt-1 text-sm font-normal leading-6 text-gray-700 sm:col-span-2 sm:mt-0 dark:bg-medium dark:text-white animate-[fadeIn_2s_ease-in-out]'>
               I am a software engineer who loves to build and experience novel technologies. My tech stack mainly falls
               under the Java & Spring domain. My work and projects primarily involve Spring Boot, Docker, Redis, MySQL,
               and Message Queues (Kafka / RabbitMQ). Instead of being a pure backend engineer, I find being a full-stack
@@ -49,7 +45,7 @@ export default async function AboutPage() {
               <Timeline />
             </dd>
           </div>
-          <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
+          <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 animate-[fadeIn_4s_ease-in-out]'>
             <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <MapPinIcon />
               <div id="contact">
@@ -77,7 +73,7 @@ export default async function AboutPage() {
             </dd>
           </div>
 
-          <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
+          <div className='px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 animate-[fadeIn_5s_ease-in-out]'>
             <dt className='flex gap-1 text-sm font-medium leading-6 text-gray-900 dark:bg-medium dark:text-white'>
               <CloudArrowIcon />
               <div id="resume">
